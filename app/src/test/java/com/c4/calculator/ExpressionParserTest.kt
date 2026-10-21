@@ -1,6 +1,6 @@
 package com.c4.calculator
 
-import com.c4.calculator.engine.AngleMode
+import com.c4.calculator.data.settings.AngleMode
 import com.c4.calculator.engine.ExpressionParser
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
