@@ -75,7 +75,7 @@ fun CalculatorScreen(
 }
 
 @Composable
-private fun btn(label: String, onClick: () -> Unit, modifier: Modifier = Modifier, weight: Float = 1f) {
+private fun RowScope.btn(label: String, onClick: () -> Unit, modifier: Modifier = Modifier, weight: Float = 1f) {
     Button(onClick = onClick, modifier = modifier.weight(weight).padding(2.dp)) {
         Text(label, fontSize = 18.sp)
     }

@@ -26,12 +26,12 @@ fun HistoryScreen(
     calcVm: CalculatorViewModel,
     padding: androidx.compose.foundation.layout.PaddingValues
 ) {
+    val items by vm.items.collectAsState()
     Column(Modifier.fillMaxSize().padding(padding).padding(8.dp)) {
         Row(Modifier.fillMaxWidth()) {
             Button(onClick = { vm.clearAll() }) { Text("Clear All") }
         }
         LazyColumn(Modifier.fillMaxSize()) {
-            val items by vm.items.collectAsState()
             items(items) { item ->
                 HistoryRow(item, onClick = {
                     calcVm.setExpression(item.expression)
