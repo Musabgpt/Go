@@ -98,5 +98,5 @@ class CalculatorViewModel(app: Application) : AndroidViewModel(app) {
         return s
     }
 
-    fun setExpression(v: String) { expression = v }
+    fun loadExpression(v: String) { expression = v }
 }
