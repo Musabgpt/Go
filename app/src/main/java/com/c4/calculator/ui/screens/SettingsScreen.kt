@@ -41,7 +41,8 @@ fun SettingsScreen(vm: SettingsViewModel, padding: androidx.compose.foundation.l
             Text("Sound", Modifier.weight(1f))
             Switch(checked = s.sound, onCheckedChange = { vm.setSound(it) })
         }
-        Button(onClick = { vm.clearHistory(androidx.compose.ui.platform.LocalContext.current.applicationContext as android.app.Application) }) {
+        val ctx = androidx.compose.ui.platform.LocalContext.current
+        Button(onClick = { vm.clearHistory(ctx.applicationContext as android.app.Application) }) {
             Text("Clear History")
         }
         Text("About: Calculator v1.0", Modifier.padding(top = 16.dp))
