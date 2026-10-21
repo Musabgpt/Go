@@ -34,7 +34,7 @@ fun HistoryScreen(
         LazyColumn(Modifier.fillMaxSize()) {
             items(items) { item ->
                 HistoryRow(item, onClick = {
-                    calcVm.setExpression(item.expression)
+                    calcVm.loadExpression(item.expression)
                 }, onDelete = { vm.delete(item) })
             }
         }
